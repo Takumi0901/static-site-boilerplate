@@ -1,0 +1,52 @@
+/* ### display
+--------------------------------------------------------- */
+.u-d-tb {
+  display: table !important;
+}
+
+.u-d-tbc {
+  display: table-cell !important;
+}
+
+.u-d-b {
+  display: block !important;
+}
+
+.u-d-ib {
+  display: inline-block !important;
+}
+
+.u-d-n{
+  display: none !important;
+}
+
+.u-d-pc {
+  display: none !important;
+}
+
+.u-d-sp {
+  display: block !important;
+}
+
+.u-df-pc {
+  display: none !important;
+}
+
+.u-df-sp {
+  display: flex !important;
+}
+
+@media (min-width: $var-breakpoint) {
+  .u-d-pc {
+    display: block !important;
+  }
+  .u-d-sp {
+    display: none !important;
+  }
+  .u-df-pc {
+    display: flex !important;
+  }
+  .u-df-sp {
+    display: none !important;
+  }
+}

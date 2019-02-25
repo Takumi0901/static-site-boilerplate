@@ -1,0 +1,32 @@
+/*
+# nav
+ */
+
+.c-nav {
+  list-style: none;
+}
+
+// Modifier
+// --------------------
+.c-nav--center {
+  text-align: center;
+}
+
+.c-nav--right {
+  text-align: right;
+}
+
+// Element
+// --------------------
+.c-nav__item {
+  display: inline-block;
+
+  a{
+    display: block;
+    padding: 0 $margin-base * 3;
+    text-decoration: none;
+
+    @include middle-line(54);
+  }
+}
+

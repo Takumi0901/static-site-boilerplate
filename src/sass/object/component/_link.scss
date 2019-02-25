@@ -1,0 +1,16 @@
+/* link
+--------------------------------------------------------- */
+.c-link--white {
+  color: $base-color-white;
+
+  &:link {
+    color: $base-color-white;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($base-color-white, 5%);
+  }
+}

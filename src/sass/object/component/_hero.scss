@@ -1,0 +1,85 @@
+/*
+# hero
+ */
+
+.c-hero {
+  padding: $margin-base * 4 $margin-base * 2 0;
+  position: relative;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+  img {
+    width: 140px;
+  }
+}
+
+// Modifier
+// --------------------
+.c-hero--bg {
+  background: url('images/body-reset-hero2.jpg') no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+// Element
+// --------------------
+.c-hero__inner {
+  width: auto;
+  margin: 0 auto;
+  padding: 0 $margin-base * 2;
+  z-index: 1;
+  color: $base-color-white;
+  text-align: center;
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  p {
+    font-size: 12px;
+    line-height: 2em;
+  }
+}
+
+.c-hero__inner__title {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: $margin-base * 2;
+  color: $base-color-white;
+}
+
+.c-hero__inner__text {
+  margin-bottom: $margin-base * 2;
+  color: $base-color-white;
+}
+
+.c-hero__icon {
+  position: absolute;
+  bottom: -8%;
+  left: 10%;
+  border: solid $base-color-white 2px;
+
+  @include box-shadow(0, 0, 12px, 0, rgba(10, 2, 4, .40));
+}
+
+// PC only
+// --------------------
+@media (min-width: $breakpoint) {
+  .c-hero {
+    margin-bottom: -42px;
+    height: 540px;
+    img {
+      width: 200px;
+    }
+  }
+  .c-hero__inner {
+    max-width: $max-width;
+    margin: 0 auto;
+    p {
+      font-size: 14px;
+      line-height: 2em;
+    }
+  }
+}

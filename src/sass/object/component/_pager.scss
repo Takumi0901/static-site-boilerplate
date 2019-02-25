@@ -1,0 +1,46 @@
+.c-pager {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+  -webkit-flow: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-pager__list {
+  display: inline-block;
+  padding: 0 $margin-base;
+}
+
+.c-pager__item {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+
+  &.isCurrent {
+    color: $base-color-white;
+    background: $primary-color;
+    border-radius: 30px;
+  }
+}
+
+.c-pager__item--prev {
+  width: 51px;
+  height: 39px;
+  background: url("images/arrow-prev.png") no-repeat;
+  background-size: contain;
+  display: block;
+}
+
+.c-pager__item--next {
+  width: 51px;
+  height: 39px;
+  background: url("images/arrow-next.png") no-repeat;
+  background-size: contain;
+  display: block;
+}

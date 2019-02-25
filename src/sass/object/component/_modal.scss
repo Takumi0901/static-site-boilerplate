@@ -1,0 +1,107 @@
+/*
+# modal
+ */
+
+.c-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  overflow-y: scroll;
+  opacity: 0;
+  display: none;
+  animation-duration: 0.5s;
+  animation-name: fade-out-100;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fade-out-100;
+}
+
+.c-modal__panel {
+  position: relative;
+  width: 94%;
+  margin: $margin-base * 5 auto;
+  background: #fff;
+  -webkit-box-shadow: 0 0 8px rgba(10, 2, 4, .5);
+  box-shadow: 0 0 8px rgba(10, 2, 4, .5);
+
+  @include border-radius(8);
+}
+
+// Container
+// --------------------
+.c-modal.is-fadein,
+.c-modal[aria-clicked="true"] {
+  display: block;
+  opacity: 1;
+  animation-duration: 0.5s;
+  animation-name: fade-in-100;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fade-in-100;
+}
+
+.c-modal.is-fadeout {
+  opacity: 0;
+  animation-duration: 0.5s;
+  animation-name: fade-out-100;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fade-out-100;
+}
+
+// Overlay
+// --------------------
+.c-modal__overlay {
+  display: block;
+  z-index: -1;
+  background: rgba(0, 0, 0, .6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-modal__header {
+  border-bottom: 1px solid $default-color-lighten-20;
+  padding: $margin-base * 2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.c-modal__content {
+  position: relative;
+  padding: $margin-base * 2;
+  min-height: 300px;
+}
+
+.c-modal__bottom {
+  border-top: 1px solid $default-color-lighten-20;
+  padding: $margin-base * 2;
+  text-align: right;
+}
+
+.c-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 20px;
+
+  &--circle {
+    top: -38px;
+    font-size: 16px;
+  }
+}
+
+// Full
+// --------------------
+.c-modal--full {
+  width: 100%;
+  left: 0;
+}
+
+@media (min-width: $breakpoint) {
+  .c-modal__panel {
+    width: 80%;
+  }
+}

@@ -1,0 +1,52 @@
+/* header
+--------------------------------------------------------- */
+.l-header {
+  background: $base-color-white !important;
+  display: block;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+  }
+}
+
+.l-header__inner {
+  position: relative;
+  max-width: 1380px;
+  margin: 0 auto;
+  height: 60px;
+  padding-left: $margin-base;
+}
+
+.l-header__logo {
+  display: block;
+  width: 145px;
+  text-align: center;
+}
+
+@media (min-width: $breakpoint) {
+  .l-header {
+    height: 64px;
+    width: 100%;
+  }
+
+  .l-header__logo {
+    display: inline-block;
+    text-align: left;
+    width: 154px;
+  }
+
+  .l-header__inner {
+    height: 64px;
+  }
+}

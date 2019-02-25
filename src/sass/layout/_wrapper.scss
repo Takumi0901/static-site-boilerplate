@@ -1,0 +1,60 @@
+/* wrapper
+--------------------------------------------------------- */
+.l-wrapper {
+  padding: 64px $margin-base * 2;
+  display: block;
+  overflow: hidden;
+}
+
+.l-wrapper--page {
+  padding: $margin-base * 2 0;
+  display: block;
+  overflow: hidden;
+}
+
+.l-wrapper__inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: block;
+}
+
+.l-wrapper__inner--960 {
+  max-width: 960px;
+  margin: 0 auto;
+  display: block;
+}
+
+.l-wrapper--primary {
+  background: #ede7de;
+}
+
+.l-wrapper--secondary {
+  background: lighten(#e3dfdf, 5%);
+}
+
+.l-wrapper--white {
+  background: $base-color-white;
+}
+
+.l-wrapper--border {
+  border-top: solid 1px #e3dfdf;
+  border-bottom: solid 1px #e3dfdf;
+}
+
+.l-wrapper--hero {
+  margin-top: 0;
+}
+
+@media (min-width: $breakpoint) {
+  .l-wrapper--hero {
+    margin-top: 80px;
+  }
+  .l-wrapper--page {
+    padding: 80px $margin-base * 2;
+
+  }
+  .l-wrapper {
+    padding: 104px $margin-base * 2;
+  }
+}
+

@@ -1,0 +1,95 @@
+// ---------------------------------------------------------------
+//  Base-Size
+// ---------------------------------------------------------------
+$base-size: 8;
+$max-width: 1200px;
+$breakpoint: 768px;
+
+// ---------------------------------------------------------------
+//  Font
+// ---------------------------------------------------------------
+$font-family-base: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$font-size-base: 14px;
+
+// ---------------------------------------------------------------
+//  Line-hieght
+// ---------------------------------------------------------------
+$line-height-base: 1.4;
+
+// ---------------------------------------------------------------
+//  Base-color
+// ---------------------------------------------------------------
+$base-color: #f1f1f1;
+$base-color-lighten: #f9f9f9;
+$base-color-white: #fff;
+$base-color-text: #515151;
+$base-color-link: #0bd;
+
+// ---------------------------------------------------------------
+//  Content-color
+// ---------------------------------------------------------------
+$default-color: #333;
+$primary-color: #1e0404;
+$secondary-color: #a38459;
+$highlight-color: #f24b4b;
+$info-color: #f2e04b;
+
+$facebook-color: #436699;
+$twitter-color: #5bafe9;
+$rss-color: #f28046;
+$hatena-color: #2aa6d8;
+$feedly-color: #70ca3b;
+$pocket-color: #ee4056;
+$google-color: #dd4b39;
+$line-color: #1dcd00;
+$insta-color: #d93177;
+
+//  Content-color default
+// ---------------------------------------------------------------
+$default-color-darken: darken($default-color, 30%);
+$default-color-lighten-10: lighten($default-color, 10%);
+$default-color-lighten-20: lighten($default-color, 20%);
+$default-color-lighten-30: lighten($default-color, 30%);
+
+//  Content-color primary
+// ---------------------------------------------------------------
+$primary-color-darken: darken($primary-color, 30%);
+$primary-color-lighten-10: lighten($primary-color, 10%);
+$primary-color-lighten-20: lighten($primary-color, 20%);
+$primary-color-lighten-30: lighten($primary-color, 30%);
+
+//  Content-color secondary
+// ---------------------------------------------------------------
+$secondary-color-darken: darken($secondary-color, 30%);
+$secondary-color-lighten-10: lighten($secondary-color, 10%);
+$secondary-color-lighten-20: lighten($secondary-color, 20%);
+$secondary-color-lighten-30: lighten($secondary-color, 30%);
+
+//  Content-color highlight
+// ---------------------------------------------------------------
+$highlight-color-darken: darken($highlight-color, 30%);
+$highlight-color-lighten-10: lighten($highlight-color, 10%);
+$highlight-color-lighten-20: lighten($highlight-color, 20%);
+$highlight-color-lighten-30: lighten($highlight-color, 30%);
+
+//  Content-color info
+// ---------------------------------------------------------------
+$info-color-darken: darken($info-color, 30%);
+$info-color-lighten-10: lighten($info-color, 10%);
+$info-color-lighten-20: lighten($info-color, 20%);
+$info-color-lighten-30: lighten($info-color, 30%);
+
+// ---------------------------------------------------------------
+//  Margin
+// ---------------------------------------------------------------
+$margin-base: $base-size * 1px;
+
+// ---------------------------------------------------------------
+//  Grid
+// ---------------------------------------------------------------
+$var-breakpoint: $breakpoint;
+$var-col: 12;
+$var-max-width: 100%;
+$var-col-gutters: 3%;
+$var-col-width: $var-max-width / $var-col;
+$var-col-width-gutters: ($var-max-width + $var-col-gutters) / $var-col;

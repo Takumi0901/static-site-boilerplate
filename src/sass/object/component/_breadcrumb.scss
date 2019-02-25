@@ -1,0 +1,51 @@
+/*
+#beadcrumb
+*/
+.c-breadcrumb {
+  width: 100%;
+  border-top: solid 1px #e3dfdf;
+  padding: $margin-base * 2 $margin-base * 2;
+  color: $primary-color;
+  background: $base-color-white;
+}
+
+// Element
+// --------------------
+.c-breadcrumb__menu {
+  max-width: 960px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+  -webkit-flow: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: baseline;
+}
+
+.c-breadcrumb__list {
+  display: inline-block;
+  color: $primary-color;
+  padding-right:4px;
+  a {
+    display: inline-block;
+    padding-right:4px;
+  }
+}
+
+.c-breadcrumb__arrow {
+  vertical-align: -2px;
+}
+
+.c-breadcrumb__home {
+  vertical-align: 2px;
+}
+
+// PC only
+// --------------------
+@media (min-width: $breakpoint) {
+  .c-breadcrumb {
+    padding: $margin-base * 3 $margin-base * 2 $margin-base * 3;
+  }
+}

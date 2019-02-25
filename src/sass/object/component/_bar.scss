@@ -1,0 +1,64 @@
+/*
+# bar
+ */
+
+.c-bar {
+  display: block;
+  background: $base-color-white;
+
+  @include middle-line(56);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p{
+    margin: 0;
+  }
+
+  // Modifier
+  // --------------------
+  &--small {
+    @include middle-line(32);
+    color: $base-color-white;
+  }
+
+  &--black {
+    background: $primary-color;
+  }
+
+  &--fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid $default-color-lighten-20;
+  }
+}
+
+//  Element
+// --------------------
+.c-bar__inner {
+  position: relative;
+  width: auto;
+  padding: 0 $margin-base * 2;
+}
+
+.c-bar__inner__btn {
+  display: block;
+
+  &:hover {
+    background: $base-color-lighten;
+  }
+}
+
+// PC only
+// --------------------
+@media (min-width: $breakpoint) {
+  .c-bar__inner {
+    position: relative;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}

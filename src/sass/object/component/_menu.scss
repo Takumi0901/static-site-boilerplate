@@ -1,0 +1,58 @@
+/*
+# menu
+ */
+.c-menu {
+  list-style: none;
+}
+
+// Modifier
+// --------------------
+.c-menu--border {
+  border-top: solid 1px $default-color-lighten-20;
+
+  .c-menu__item:last-child {
+    border-bottom: solid 1px $default-color-lighten-20;
+  }
+}
+
+// Element
+// --------------------
+.c-menu__item {
+  border-bottom: solid 1px $default-color-lighten-20;
+  position: relative;
+  padding: $margin-base / 2;
+  display: block;
+
+  &:last-child {
+    border: 0;
+  }
+
+  a {
+    display: block;
+    padding: $margin-base $margin-base * 4 $margin-base $margin-base;
+    text-decoration: none;
+
+    @include border-radius(4);
+
+    &:hover {
+      background: $base-color-lighten;
+    }
+  }
+
+  a.is-active {
+    background: $primary-color;
+    color: $base-color-white;
+
+    &:hover {
+      background: lighten($primary-color, 10%);
+    }
+  }
+}
+
+.c-menu__item__icon {
+  position: absolute;
+  right: $margin-base * 2;
+  top: 50%;
+  margin-top: -8px;
+  color: $default-color-lighten-10;
+}

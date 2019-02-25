@@ -1,0 +1,108 @@
+html,
+body {
+  overflow-y: hidden;
+}
+
+html {
+  background: $base-color-white;
+}
+
+body {
+  height: 100%;
+  color: $base-color-text;
+  background: #f7f6f6;
+  word-wrap: break-word;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+address {
+  font-style: normal;
+}
+
+a {
+  cursor: pointer;
+  color: $base-color-text;
+
+  &:link {
+    color: $base-color-text;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: .7;
+    text-decoration: none;
+  }
+}
+
+.linkText {
+  cursor: pointer;
+  color: $secondary-color;
+  text-decoration: underline;
+
+  &:link {
+    color: $secondary-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.imgContainer {
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.linkPhone--white {
+  cursor: pointer;
+  color: $base-color-white;
+
+  &:link {
+    color: $base-color-white;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: .7;
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: $margin-base;
+}
+
+p {
+  margin-bottom: $margin-base;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type="radio"] {
+  margin-left: $margin-base * 2;
+  margin-right: $margin-base;
+}
+
+@media (min-width: $breakpoint) {
+  a:hover img {
+    //@include opacity(.7);
+  }
+}
