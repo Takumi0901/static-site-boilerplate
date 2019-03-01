@@ -100,9 +100,3 @@ input[type="radio"] {
   margin-left: $margin-base * 2;
   margin-right: $margin-base;
 }
-
-@media (min-width: $breakpoint) {
-  a:hover img {
-    //@include opacity(.7);
-  }
-}

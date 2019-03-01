@@ -51,8 +51,9 @@ gulp.task("sass", done => {
 gulp.task("webserver", function() {
   gulp.src("./dist").pipe(
     webserver({
+      host: '0.0.0.0',
       livereload: true,
-      port: 8001,
+      port: 3000,
       fallback: "index.html",
       open: true
     })
