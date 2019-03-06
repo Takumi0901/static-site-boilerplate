@@ -2,13 +2,24 @@
 --------------------------------------------------------- */
 .l-header {
   background: $base-color-white !important;
-  display: block;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flow: wrap;
+  flex-wrap: wrap;
   height: 60px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0 $margin-base * 2;
 
   h1,
   h2,
@@ -22,31 +33,6 @@
 
 .l-header__inner {
   position: relative;
-  max-width: 1380px;
-  margin: 0 auto;
-  height: 60px;
-  padding-left: $margin-base;
-}
-
-.l-header__logo {
-  display: block;
-  width: 145px;
-  text-align: center;
-}
-
-@media (min-width: $breakpoint) {
-  .l-header {
-    height: 64px;
-    width: 100%;
-  }
-
-  .l-header__logo {
-    display: inline-block;
-    text-align: left;
-    width: 154px;
-  }
-
-  .l-header__inner {
-    height: 64px;
-  }
+  width: 100%;
+  max-width: $max-width;
 }

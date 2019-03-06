@@ -6,5 +6,9 @@
   display: block;
   background: #fff;
   position: relative;
-  padding: $margin-base * 3 $margin-base * 4;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.c-card__content {
+  padding: $margin-base * 2;
 }

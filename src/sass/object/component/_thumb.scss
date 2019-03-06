@@ -2,24 +2,22 @@
 #thumb
 */
 .c-thumb {
-  padding: $margin-base / 2;
-  border: 2px solid $default-color-lighten-20;
+  position: relative;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 50%;
 
-  &:hover,
-  &.is-active {
-    background: $default-color;
-    border-color: $default-color;
+  img {
+    display: block;
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    margin: auto;
   }
-}
-
-// Modifier
-// --------------------
-.c-thumb--small,
-.c-thumb--medium {
-  padding: 2px;
-  border: 1px solid $default-color-lighten-20;
-}
-
-.c-thumb--max-200 {
-  max-width: 200px;
 }

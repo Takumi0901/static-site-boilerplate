@@ -10,14 +10,13 @@ html {
 body {
   height: 100%;
   color: $base-color-text;
-  background: #f7f6f6;
+  background: $base-color-white;
   word-wrap: break-word;
   font-size: $font-size-base;
   font-family: $font-family-base;
   line-height: $line-height-base;
   -webkit-text-size-adjust: 100%;
 }
-
 
 address {
   font-style: normal;
@@ -34,7 +33,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    opacity: .7;
+    opacity: 0.7;
     text-decoration: none;
   }
 }
@@ -74,7 +73,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    opacity: .7;
+    opacity: 0.7;
     text-decoration: none;
   }
 }
