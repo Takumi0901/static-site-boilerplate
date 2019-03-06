@@ -14,6 +14,7 @@ var pngquant = require("imagemin-pngquant");
 var mozjpeg = require("imagemin-mozjpeg");
 var changed = require("gulp-changed");
 var concat = require("gulp-concat");
+var prefix = require("gulp-autoprefixer");
 
 var exports = {
   entry: "src/",
@@ -43,6 +44,13 @@ gulp.task("sass", done => {
         outputStyle: exports.outputStyle
       })
     )
+    .pipe(
+      prefix({
+        browsers: ["last 2 versions", "ie >= 11", "Android >= 4", "ios_saf >= 8"],
+        cascade: false,
+        grid: true // gridの値にtrueを指定する
+      })
+    )
     .pipe(header('@charset "utf-8";\n\n'))
     .pipe(gulp.dest(exports.output + "css"));
   done();
@@ -51,7 +59,7 @@ gulp.task("sass", done => {
 gulp.task("webserver", function() {
   gulp.src("./dist").pipe(
     webserver({
-      host: '0.0.0.0',
+      host: "0.0.0.0",
       livereload: true,
       port: 3000,
       fallback: "index.html",
