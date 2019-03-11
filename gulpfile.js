@@ -48,7 +48,7 @@ gulp.task("sass", done => {
       prefix({
         browsers: ["last 2 versions", "ie >= 11", "Android >= 4", "ios_saf >= 8"],
         cascade: false,
-        grid: true // gridの値にtrueを指定する
+        grid: true
       })
     )
     .pipe(header('@charset "utf-8";\n\n'))
@@ -59,7 +59,7 @@ gulp.task("sass", done => {
 gulp.task("webserver", function() {
   gulp.src("./dist").pipe(
     webserver({
-      host: "0.0.0.0",
+      host: "localhost",
       livereload: true,
       port: 3000,
       fallback: "index.html",

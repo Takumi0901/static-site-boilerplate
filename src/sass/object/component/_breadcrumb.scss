@@ -3,16 +3,13 @@
 */
 .c-breadcrumb {
   width: 100%;
-  border-top: solid 1px #e3dfdf;
-  padding: $margin-base * 2 $margin-base * 2;
-  color: $primary-color;
-  background: $base-color-white;
+  padding: $margin-base * 2 0 $margin-base * 3;
 }
 
 // Element
 // --------------------
 .c-breadcrumb__menu {
-  max-width: 960px;
+  max-width: $max-width;
   margin: 0 auto;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,26 +23,23 @@
 
 .c-breadcrumb__list {
   display: inline-block;
-  color: $primary-color;
-  padding-right:4px;
+  padding-right: $margin-base;
   a {
     display: inline-block;
-    padding-right:4px;
+    padding-right: $margin-base;
+
+    &:after {
+      content: "/";
+      display: inline-block;
+      padding-left: $margin-base * 2;
+    }
   }
-}
-
-.c-breadcrumb__arrow {
-  vertical-align: -2px;
-}
-
-.c-breadcrumb__home {
-  vertical-align: 2px;
 }
 
 // PC only
 // --------------------
 @media (min-width: $breakpoint) {
   .c-breadcrumb {
-    padding: $margin-base * 3 $margin-base * 2 $margin-base * 3;
+    padding: $margin-base * 2 0 $margin-base * 3;
   }
 }

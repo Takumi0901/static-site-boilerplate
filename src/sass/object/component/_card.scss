@@ -2,9 +2,11 @@
 # card
 */
 
+$card-default-bg: $base-color-white;
+
 .c-card {
   display: block;
-  background: #fff;
+  background: $card-default-bg;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }

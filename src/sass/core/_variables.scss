@@ -20,9 +20,9 @@ $line-height-base: 1.4;
 //  Base-color
 // ---------------------------------------------------------------
 $base-color: #f9f9f9;
-$base-color-lighten: #f9f9f9;
 $base-color-white: #fff;
 $base-color-text: #515151;
+$base-color-border: #bcbcbc;
 $base-color-link: #0bd;
 
 // ---------------------------------------------------------------
@@ -33,16 +33,6 @@ $primary-color: #1e0404;
 $secondary-color: #a38459;
 $highlight-color: #f24b4b;
 $info-color: #f2e04b;
-
-$facebook-color: #436699;
-$twitter-color: #5bafe9;
-$rss-color: #f28046;
-$hatena-color: #2aa6d8;
-$feedly-color: #70ca3b;
-$pocket-color: #ee4056;
-$google-color: #dd4b39;
-$line-color: #1dcd00;
-$insta-color: #d93177;
 
 //  Content-color default
 // ---------------------------------------------------------------
@@ -88,8 +78,3 @@ $margin-base: $base-size * 1px;
 //  Grid
 // ---------------------------------------------------------------
 $var-breakpoint: $breakpoint;
-$var-col: 12;
-$var-max-width: 100%;
-$var-col-gutters: 3%;
-$var-col-width: $var-max-width / $var-col;
-$var-col-width-gutters: ($var-max-width + $var-col-gutters) / $var-col;

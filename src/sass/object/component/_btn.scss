@@ -2,134 +2,51 @@
 # btn
  */
 
+$btn-default-bg: $base-color-text;
+$btn-default-ov: lighten($base-color-text, 10%);
+$btn-default-text-color: #fff;
+
 .c-btn {
-  display: block;
+  display: inline-block;
   border: 0;
   text-align: center;
-  vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
-  height: 56px;
-  line-height: 56px;
+  padding: $margin-base $margin-base * 2;
   font-size: 14px;
   outline: none;
-  position: relative; 
-  white-space:nowrap;
-  opacity: 1;
+  position: relative;
+  white-space: nowrap;
+  background: $btn-default-bg;
+  color: $btn-default-text-color;
 
   &:link,
   &:active,
   &:hover,
-  &:visited{
-    color: #fff;
+  &:visited {
+    color: $btn-default-text-color;
     text-decoration: none;
-    opacity: 1;
+  }
+
+  &:hover {
+    background: $btn-default-ov;
   }
 
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
     cursor: not-allowed;
-
-    @include opacity(.65);
   }
 }
-
-// Modifier - border
-// --------------------
-.c-btn--default {
-  background-color: #483a2f;
-  border-radius: 31.5px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  box-shadow:
-    0 32px 32px 0 rgba(73, 57, 57, 0.07),
-    0 16px 16px 0 rgba(61, 40, 40, 0.08),
-    0 8px 8px 0 rgba(76, 53, 53, 0.08),
-    0 4px 4px 0 rgba(78, 48, 48, 0.08),
-    0 2px 2px 0 rgba(75, 54, 54, 0.08);
-
-  &:hover {
-    background-color: #241111;
-  }
-}
-
-.c-btn--primary {
-  background-image: linear-gradient(to right, #e1cc81 0%, #945b1c 60%, #945b1c 100%);
-  background-size: 200% auto;
-  border-radius: 31.5px;
-  box-shadow:
-    0 32px 32px 0 rgba(73, 57, 57, 0.07),
-    0 16px 16px 0 rgba(61, 40, 40, 0.08),
-    0 8px 8px 0 rgba(76, 53, 53, 0.08),
-    0 4px 4px 0 rgba(78, 48, 48, 0.08),
-    0 2px 2px 0 rgba(75, 54, 54, 0.08);
-  -webkit-transition: all .3s;
-  transition: all .3s;
-
-  &:hover {
-    background-color: #945b1c;
-    background-position: right center;
-  }
-}
-
-.c-btn--secondary {
-  background-image: linear-gradient(107deg, #a18e72 0%, #241111 48%, #241111 100%);
-  background-size: 200% auto;
-  border-radius: 31.5px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  box-shadow:
-    0 32px 32px 0 rgba(73, 57, 57, 0.07),
-    0 16px 16px 0 rgba(61, 40, 40, 0.08),
-    0 8px 8px 0 rgba(76, 53, 53, 0.08),
-    0 4px 4px 0 rgba(78, 48, 48, 0.08),
-    0 2px 2px 0 rgba(75, 54, 54, 0.08);
-
-  &:hover {
-    background-color: #241111;
-    background-position: right center;
-  }
-}
-
-.c-btn--border-primary {
-  background: $base-color-white;
-  border-radius: 31.5px;
-  border: solid 1px $primary-color;
-  color: $primary-color;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  &:link,
-  &:active,
-  &:hover,
-  &:visited{
-    color: $primary-color;
-    text-decoration: none;
-    opacity: 1;
-  }
-  &:hover {
-    color: $base-color-white;
-    background-color: $primary-color;
-  }
-}
-
 
 // Modifier - size
 // --------------------
-.c-btn--jumbo {
-  @include button-size(24px, 56px);
-}
-
 .c-btn--large {
   @include button-size(20px, 48px);
 }
 
 .c-btn--small {
-  @include button-size(12px, 24px);
-}
-
-.c-btn--tiny {
-  @include button-size(10px, 16px);
+  @include button-size(10px, 20px);
 }
 
 // Modifier - display
@@ -137,158 +54,4 @@
 .c-btn--block {
   display: block;
   width: 100%;
-}
-
-// Modifier - circle
-// --------------------
-.c-btn--circle {
-  width: 38px;
-  height: 38px;
-  padding: 0;
-  line-height: 38px;
-
-  @include border-radius-per(100%);
-  @include box-shadow(0, 0, 12px, 0, rgba(10, 2, 4, .40));
-
-  &__inner {
-    display: table-cell;
-    vertical-align: middle;
-  }
-}
-
-// Block - panel
-// --------------------
-.c-btn-panel {
-  background: $base-color-white;
-  padding: $margin-base * 4;
-  display: block;
-  -webkit-transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition-property: box-shadow;
-
-  @include box-shadow(0, 0, 10px, 0, rgba(10, 2, 4, .30));
-
-  &:link,
-  &:active,
-  &:visited {
-    color: $primary-color;
-    text-decoration: none;
-  }
-
-  &:hover {
-    color: $primary-color;
-    text-decoration: none;
-    -webkit-transition: -webkit-transform .3s;
-    transition: transform .3s;
-    transition-property: box-shadow;
-    @include box-shadow(0, 0, 2px, 0, rgba(10, 2, 4, .23));
-
-    .c-btn-panel__arrow {
-      -webkit-transition: -webkit-transform .3s;
-      transition: transform .3s;
-      transition-property: transform;
-      -webkit-transform: translateX(4px);
-      transform: translateX(4px);
-    }
-  }
-
-  &__icon {
-    font-size: 64px;
-  }
-
-  &__text {
-    font-size: 16px;
-  }
-
-  &__arrow {
-    -webkit-transition: -webkit-transform .3s;
-    transition: transform .3s;
-    transition-property: transform;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-.c-btn--facebook {
-  font-size: 18px;
-  &:link,
-  &:active,
-  &:visited {
-    color: $base-color-white;
-    background: $facebook-color;
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: lighten($facebook-color, 6%);
-  }
-}
-.c-btn--twitter {
-  font-size: 18px;
-  &:link,
-  &:active,
-  &:visited {
-    color: $base-color-white;
-    background: $twitter-color;
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: lighten($twitter-color, 6%);
-  }
-}
-
-.c-btn--google {
-  font-size: 18px;
-  &:link,
-  &:active,
-  &:visited {
-    color: $base-color-white;
-    background: $google-color;
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: lighten($google-color, 6%);
-  }
-}
-
-.c-btn--line {
-  font-size: 18px;
-  &:link,
-  &:active,
-  &:visited {
-    color: $base-color-white;
-    background: $line-color;
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: .7;
-  }
-}
-
-.c-btn--insta {
-  font-size: 18px;
-  &:link,
-  &:active,
-  &:visited {
-    color: $base-color-white;
-    background: $insta-color;
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: .7;
-  }
 }
