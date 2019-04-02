@@ -18,7 +18,7 @@ $form-default-border: $base-color-border;
     padding: $margin-base $margin-base * 2;
     width: 100%;
     -webkit-appearance: none;
-    font-size: 14px;
+    font-size: 1.4rem;
     border-radius: 1px;
   }
 }
@@ -43,7 +43,7 @@ $form-default-border: $base-color-border;
 }
 
 .c-form__title {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-bottom: $margin-base;
 }
 
@@ -69,7 +69,7 @@ $form-default-border: $base-color-border;
   position: relative;
   display: inline-block;
   margin-right: 12px;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 30px;
   cursor: pointer;
 }

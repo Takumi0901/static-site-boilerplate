@@ -1,6 +1,7 @@
 html,
 body {
   overflow-y: hidden;
+  font-size: 62.5%;
 }
 
 html {
@@ -12,7 +13,7 @@ body {
   color: $base-color-text;
   background: $base-color-white;
   word-wrap: break-word;
-  font-size: $font-size-base;
+  font-size: 1.4rem;
   font-family: $font-family-base;
   line-height: $line-height-base;
   -webkit-text-size-adjust: 100%;

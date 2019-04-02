@@ -3,15 +3,19 @@
 $root-box-sizing: border-box !default;
 $root-cursor: default !default;
 $root-font-family: sans-serif !default;
-$root-font-size: 100% !default;
+// $root-font-size: 100% !default;
 $root-line-height: 1.5 !default;
 $root-text-rendering: optimizeLegibility !default;
 
-$html-background-color: #FFF !default;
+$html-background-color: #fff !default;
 $html-color: #000 !default;
 $anchor-text-decoration: none !default;
 $form-element-background-color: transparent !default;
-$form-element-min-height: if(unitless($root-line-height), #{$root-line-height}em, if(unit($root-line-height) != '%', $root-line-height, null)) !default;
+$form-element-min-height: if(
+  unitless($root-line-height),
+  #{$root-line-height}em,
+  if(unit($root-line-height) != "%", $root-line-height, null)
+) !default;
 $media-element-vertical-align: middle !default;
 $monospace-font-family: monospace !default;
 $nav-list-style: none !default;
@@ -126,7 +130,7 @@ textarea {
 :root {
   box-sizing: $root-box-sizing;
   cursor: $root-cursor;
-  font: #{$root-font-size}/#{$root-line-height} $root-font-family;
+  // font: #{$root-font-size}/#{$root-line-height} $root-font-family;
   text-rendering: $root-text-rendering;
 }
 
@@ -218,15 +222,15 @@ nav ul {
 // specify the standard appearance of selects
 
 select {
-  -moz-appearance: none;    // Firefox 40+
+  -moz-appearance: none; // Firefox 40+
   -webkit-appearance: none; // Chrome 45+
 
   &::-ms-expand {
-    display: none;        // Edge 12+, Internet Explorer 11-
+    display: none; // Edge 12+, Internet Explorer 11-
   }
 
   &::-ms-value {
-    color: currentColor;  // Edge 12+, Internet Explorer 11-
+    color: currentColor; // Edge 12+, Internet Explorer 11-
   }
 }
 

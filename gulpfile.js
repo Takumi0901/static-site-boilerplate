@@ -15,6 +15,7 @@ var mozjpeg = require("imagemin-mozjpeg");
 var changed = require("gulp-changed");
 var concat = require("gulp-concat");
 var prefix = require("gulp-autoprefixer");
+var connect = require("gulp-connect");
 
 var exports = {
   entry: "src/",
@@ -31,7 +32,8 @@ gulp.task("ejs", done => {
     .pipe(plumber())
     .pipe(ejs(json))
     .pipe(rename({ extname: ".html" }))
-    .pipe(gulp.dest("dist/"));
+    .pipe(gulp.dest("dist/"))
+    .pipe(connect.reload());
   done();
 });
 
@@ -52,20 +54,29 @@ gulp.task("sass", done => {
       })
     )
     .pipe(header('@charset "utf-8";\n\n'))
-    .pipe(gulp.dest(exports.output + "css"));
+    .pipe(gulp.dest(exports.output + "css"))
+    .pipe(connect.reload());
   done();
 });
 
-gulp.task("webserver", function() {
-  gulp.src("./dist").pipe(
-    webserver({
-      host: "localhost",
-      livereload: true,
-      port: 3000,
-      fallback: "index.html",
-      open: true
-    })
-  );
+// gulp.task("webserver", function() {
+//   gulp.src("./dist").pipe(
+//     webserver({
+//       host: "localhost",
+//       livereload: true,
+//       port: 3000,
+//       fallback: "index.html",
+//       open: true
+//     })
+//   );
+// });
+
+gulp.task("connect", function() {
+  connect.server({
+    root: "./dist",
+    livereload: true,
+    port: 3000
+  });
 });
 
 gulp.task("images", done => {
@@ -81,7 +92,8 @@ gulp.task("images", done => {
         mozjpeg({ quality: 80 })
       ])
     )
-    .pipe(gulp.dest(distDir)); // 保存
+    .pipe(gulp.dest(distDir))
+    .pipe(connect.reload()); // 保存
   done();
 });
 
@@ -90,7 +102,8 @@ gulp.task("js", function() {
     .src("src/js/*.js")
     .pipe(plumber())
     .pipe(concat("app.js"))
-    .pipe(gulp.dest(distDir + "/js"));
+    .pipe(gulp.dest(distDir + "/js"))
+    .pipe(connect.reload());
 });
 
 gulp.task("log", done => {
@@ -103,4 +116,4 @@ gulp.watch("src/sass/**/**/*", gulp.series("sass", "log"));
 gulp.watch("src/ejs/**/*.ejs", gulp.series("ejs", "log"));
 gulp.watch("src/images/**/*.{png,jpg,gif,svg}", gulp.series("images", "log"));
 
-gulp.task("default", gulp.series("js", "sass", "ejs", "images", "webserver"));
+gulp.task("default", gulp.series("js", "sass", "ejs", "images", "connect"));

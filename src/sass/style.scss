@@ -2,6 +2,7 @@
  # Core
 --------------------------------------------------- */
 @import "core/variables";
+@import "../../node_modules/rfs/scss";
 @import "core/mixins";
 
 /* ---------------------------------------------------
@@ -48,6 +49,7 @@
 @import "object/component/drawer";
 // @import "object/component/effect";
 // @import "object/component/floating-menu";
+@import "object/component/flex";
 @import "object/component/form";
 // @import "object/component/label";
 @import "object/component/link";

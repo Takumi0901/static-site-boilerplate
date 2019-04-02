@@ -14,7 +14,7 @@ $font-size-base: 14px;
 // ---------------------------------------------------------------
 //  Line-hieght
 // ---------------------------------------------------------------
-$line-height-base: 1.4;
+$line-height-base: 1.6;
 
 // ---------------------------------------------------------------
 //  Base-color
@@ -78,3 +78,8 @@ $margin-base: $base-size * 1px;
 //  Grid
 // ---------------------------------------------------------------
 $var-breakpoint: $breakpoint;
+$var-col: 12;
+$var-max-width: 100%;
+$var-col-gutters: 3%;
+$var-col-width: $var-max-width / $var-col;
+$var-col-width-gutters: ($var-max-width + $var-col-gutters) / $var-col;
