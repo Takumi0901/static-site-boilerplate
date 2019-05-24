@@ -7,29 +7,29 @@
 }
 
 // Top margin
-@for $value from 1 to 15 {
+@for $value from 1 to 12 {
   .u-mt-#{$value * $base-size - $base-size} {
-    margin-top: $base-size * $value - $base-size + px !important;
+    margin-top: $base-size * $value - $base-size + rem !important;
   }
 }
 
 // Right margin
-@for $value from 1 to 15 {
+@for $value from 1 to 12 {
   .u-mr-#{$value * $base-size - $base-size} {
-    margin-right: $base-size * $value - $base-size + px !important;
+    margin-right: $base-size * $value - $base-size + rem !important;
   }
 }
 
 // Bottom margin
-@for $value from 1 to 15 {
+@for $value from 1 to 12 {
   .u-mb-#{$value * $base-size - $base-size} {
-    margin-bottom: $base-size * $value - $base-size + px !important;
+    margin-bottom: $base-size * $value - $base-size + rem !important;
   }
 }
 
 // Left margin
-@for $value from 1 to 15 {
+@for $value from 1 to 12 {
   .u-ml-#{$value * $base-size - $base-size} {
-    margin-left: $base-size * $value - $base-size + px !important;
+    margin-left: $base-size * $value - $base-size + rem !important;
   }
 }

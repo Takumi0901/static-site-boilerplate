@@ -12,13 +12,14 @@ $form-default-border: $base-color-border;
   input[type="email"],
   textarea,
   select {
-    background: $base-color-white;
+    background: $base-color-bg;
     display: block;
     border: solid 1px $form-default-border;
     padding: $margin-base $margin-base * 2;
     width: 100%;
     -webkit-appearance: none;
-    font-size: 1.4rem;
+    @include responsive-font-size(14px);
+
     border-radius: 1px;
   }
 }
@@ -43,14 +44,17 @@ $form-default-border: $base-color-border;
 }
 
 .c-form__title {
-  font-size: 1.4rem;
+  @include responsive-font-size(14px);
+
   margin-bottom: $margin-base;
 }
 
 .c-form__reqiured {
   background: $highlight-color;
-  font-size: 10px;
-  color: $base-color-white;
+
+  @include responsive-font-size(10px);
+
+  color: $base-color-bg;
   padding: $margin-base / 2 $margin-base;
   margin: 0 $margin-base / 2;
   vertical-align: 1px;
@@ -69,7 +73,9 @@ $form-default-border: $base-color-border;
   position: relative;
   display: inline-block;
   margin-right: 12px;
-  font-size: 1.4rem;
+
+  @include responsive-font-size(14px);
+
   line-height: 30px;
   cursor: pointer;
 }

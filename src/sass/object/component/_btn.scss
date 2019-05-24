@@ -13,7 +13,9 @@ $btn-default-text-color: #fff;
   touch-action: manipulation;
   cursor: pointer;
   padding: $margin-base $margin-base * 2;
-  font-size: 1.4rem;
+
+  @include responsive-font-size(14px);
+
   outline: none;
   position: relative;
   white-space: nowrap;

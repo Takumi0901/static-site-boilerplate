@@ -2,7 +2,7 @@
 //  button-border-color
 // ---------------------------------------------------------------
 @mixin button-ghost-color($base-color, $text-color, $border-width) {
-  color: $base-color-white !important;
+  color: $base-color-bg !important;
   border: $base-color solid $border-width;
 
   @include border-radius(5);

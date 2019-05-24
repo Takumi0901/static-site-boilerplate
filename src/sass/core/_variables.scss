@@ -1,15 +1,15 @@
 // ---------------------------------------------------------------
 //  Base-Size
 // ---------------------------------------------------------------
-$base-size: 8;
+$base-size: 1;
 $max-width: 1200px;
 $breakpoint: 768px;
 
 // ---------------------------------------------------------------
 //  Font
 // ---------------------------------------------------------------
-$font-family-base: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-$font-size-base: 14px;
+$base-font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$font-size-base: 1.4rem;
 
 // ---------------------------------------------------------------
 //  Line-hieght
@@ -19,8 +19,7 @@ $line-height-base: 1.6;
 // ---------------------------------------------------------------
 //  Base-color
 // ---------------------------------------------------------------
-$base-color: #f9f9f9;
-$base-color-white: #fff;
+$base-color-bg: #fff;
 $base-color-text: #515151;
 $base-color-border: #bcbcbc;
 $base-color-link: #0bd;
@@ -72,10 +71,10 @@ $info-color-lighten-30: lighten($info-color, 30%);
 // ---------------------------------------------------------------
 //  Margin
 // ---------------------------------------------------------------
-$margin-base: $base-size * 1px;
+$margin-base: $base-size * 0.5rem;
 
 // ---------------------------------------------------------------
-//  Grid
+//  Flex
 // ---------------------------------------------------------------
 $var-breakpoint: $breakpoint;
 $var-col: 12;

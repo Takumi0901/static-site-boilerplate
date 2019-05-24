@@ -31,7 +31,7 @@
   margin: 0 auto;
   padding: 0 $margin-base * 2;
   z-index: 1;
-  color: $base-color-white;
+  color: $base-color-bg;
   text-align: center;
   h2 {
     font-size: 2.4rem;
@@ -47,19 +47,19 @@
   font-size: 3.2rem;
   font-weight: normal;
   margin-bottom: $margin-base * 2;
-  color: $base-color-white;
+  color: $base-color-bg;
 }
 
 .c-hero__inner__text {
   margin-bottom: $margin-base * 2;
-  color: $base-color-white;
+  color: $base-color-bg;
 }
 
 .c-hero__icon {
   position: absolute;
   bottom: -8%;
   left: 10%;
-  border: solid $base-color-white 2px;
+  border: solid $base-color-bg 2px;
 
   @include box-shadow(0, 0, 12px, 0, rgba(10, 2, 4, 0.4));
 }

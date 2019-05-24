@@ -22,7 +22,9 @@
 // --------------------
 .c-title__sub-text {
   color: $default-color-lighten-10;
-  font-size: 1.2rem;
+
+  @include responsive-font-size(12px);
+
   display: inline-block;
   margin-left: $margin-base * 2;
   font-weight: normal;

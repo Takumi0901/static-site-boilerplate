@@ -35,13 +35,13 @@
     @include border-radius(4);
 
     &:hover {
-      background: $base-color-white;
+      background: $base-color-bg;
     }
   }
 
   a.is-active {
     background: $primary-color;
-    color: $base-color-white;
+    color: $base-color-bg;
 
     &:hover {
       background: lighten($primary-color, 10%);
