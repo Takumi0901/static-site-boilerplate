@@ -3,7 +3,7 @@
  */
 
 .c-hero {
-  padding: $margin-base * 4 $margin-base * 2 0;
+  padding: 2rem 1rem 0;
   position: relative;
   height: 300px;
   width: 100%;
@@ -29,7 +29,7 @@
 .c-hero__inner {
   width: auto;
   margin: 0 auto;
-  padding: 0 $margin-base * 2;
+  padding: 0 1rem;
   z-index: 1;
   color: $base-color-bg;
   text-align: center;
@@ -46,12 +46,12 @@
 .c-hero__inner__title {
   font-size: 3.2rem;
   font-weight: normal;
-  margin-bottom: $margin-base * 2;
+  margin-bottom: 1rem;
   color: $base-color-bg;
 }
 
 .c-hero__inner__text {
-  margin-bottom: $margin-base * 2;
+  margin-bottom: 1rem;
   color: $base-color-bg;
 }
 

@@ -3,10 +3,10 @@
 */
 .c-label {
   display: inline-block;
-  padding: $margin-base / 2 $margin-base * 2;
+  padding: 0.25rem 1rem;
   background: $secondary-color;
   font-size: 1.2rem;
-  margin-left: $margin-base / 2;
+  margin-left: 0.25rem;
 
   @include border-radius(4);
 }

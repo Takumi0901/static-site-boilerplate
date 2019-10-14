@@ -13,7 +13,7 @@
   h3,
   h4,
   h5,
-  p{
+  p {
     margin: 0;
   }
 
@@ -42,7 +42,7 @@
 .c-bar__inner {
   position: relative;
   width: auto;
-  padding: 0 $margin-base * 2;
+  padding: 0 1rem;
 }
 
 .c-bar__inner__btn {

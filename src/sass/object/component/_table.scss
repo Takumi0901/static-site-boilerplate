@@ -8,7 +8,7 @@
   td,
   th {
     text-align: left;
-    padding: $margin-base;
+    padding: 1rem;
   }
 
   tr {
@@ -32,7 +32,7 @@
   td,
   th {
     text-align: left;
-    padding: $margin-base;
+    padding: 1rem;
     border-left: solid 1px $default-color-lighten-20;
   }
 
@@ -53,6 +53,6 @@
 .c-table--padding {
   td,
   th {
-    padding: $margin-base * 2 $margin-base;
+    padding: 1rem 1rem;
   }
 }

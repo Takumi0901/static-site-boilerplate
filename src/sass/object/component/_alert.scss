@@ -5,14 +5,8 @@
   color: $highlight-color;
   background: $highlight-color-lighten-30;
   border: solid 1px $highlight-color;
-  padding: $margin-base $margin-base * 2;
+  padding: 1rem 2rem;
 }
 
 // Modifier
 // --------------------
-.c-alert--success {
-  color: $secondary-color;
-  background: $secondary-color-lighten-30;
-  border: solid 1px $secondary-color;
-  padding: $margin-base $margin-base * 2;
-}

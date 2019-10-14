@@ -21,12 +21,11 @@
 .c-nav__item {
   display: inline-block;
 
-  a{
+  a {
     display: block;
-    padding: 0 $margin-base * 3;
+    padding: 0 1.5rem;
     text-decoration: none;
 
     @include middle-line(54);
   }
 }
-

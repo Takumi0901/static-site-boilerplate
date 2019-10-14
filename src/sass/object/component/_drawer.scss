@@ -7,72 +7,72 @@
 // ---------------------------------------------------------------
 
 // Base
-$base-width             : 300px;
+$base-width: 300px;
 
 // Color
-$color-base             : $base-color-bg;
-$color-primary          : $primary-color;
-$color-secondary        : $base-color-bg;
-$color-overlay          : #000;
+$color-base: $base-color-bg;
+$color-primary: $primary-color;
+$color-secondary: $base-color-bg;
+$color-overlay: #000;
 
 // z-index
-$z-index-base         : 1000;
+$z-index-base: 1000;
 
 // animation
-$animate-speed          : .3s;
+$animate-speed: 0.3s;
 
 // fixed-bar
-$fixed-bar-height       : 56px;
+$fixed-bar-height: 56px;
 
 // hamburger
-$hamburger-line-thickness   : 1px;
+$hamburger-line-thickness: 1px;
 
 // ---------------------------------------------------------------
 //  hamburger-menu
 // ---------------------------------------------------------------
 // Color
-$hamburger-menu-color     : $primary-color;
-$hamburger-menu-bg        : $color-base;
+$hamburger-menu-color: $primary-color;
+$hamburger-menu-bg: $color-base;
 
 // Size
-$hamburger-menu-size      : $base-size * 4 + px;
-$hamburger-bar-size       : $base-size * 3 + px;
+$hamburger-menu-size: $base-size * 4 + px;
+$hamburger-bar-size: $base-size * 3 + px;
 
 // animation / position
-$hamburger-menu-translate-y   : $base-size + px;
-$hamburger-menu-position    : $base-size * 2 + px;
+$hamburger-menu-translate-y: $base-size + px;
+$hamburger-menu-position: $base-size * 2 + px;
 
 // ---------------------------------------------------------------
 //  drawer
 // ---------------------------------------------------------------
 
 // Size
-$drawer-size          : $base-width;
+$drawer-size: $base-width;
 
 // Color
-$drawer-color         : $color-secondary;
+$drawer-color: $color-secondary;
 
 // z-index
-$drawer-z-index         : $z-index-base - 100;
-$overlay-z-index        : $z-index-base - 200;
+$drawer-z-index: $z-index-base - 100;
+$overlay-z-index: $z-index-base - 200;
 
 // padding
-$drawer-padding         : $fixed-bar-height + $base-size * 2;
+$drawer-padding: $fixed-bar-height + $base-size * 2;
 
 // overlay
-$overlay-bg           : $color-overlay;
+$overlay-bg: $color-overlay;
 
 // ---------------------------------------------------------------
 //  fixed-bar
 // ---------------------------------------------------------------
 // Color
-$fixed-bar-bg         : $color-base;
+$fixed-bar-bg: $color-base;
 
 // z-index
-$fixed-bar-z-index        : $z-index-base;
+$fixed-bar-z-index: $z-index-base;
 
 // animarion
-$fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
+$fixed-bar-translate: $fixed-bar-height + $base-size * 2;
 
 // ---------------------------------------------------------------
 //  drawer
@@ -114,7 +114,7 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
 .c-drawer.is-open {
   visibility: visible;
   min-height: 667px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .c-drawer.is-left.is-open {
@@ -158,7 +158,7 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
 // ---------------------------------------------------------------
 .c-drawer-overlay.is-fadein {
   display: block;
-  opacity: .2;
+  opacity: 0.2;
 }
 
 // ---------------------------------------------------------------
@@ -170,7 +170,7 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   height: $hamburger-menu-size;
   position: absolute;
   top: 50%;
-  right: $margin-base * 2;
+  right: 1rem;
 }
 
 // ---------------------------------------------------------------
@@ -210,7 +210,7 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   height: $hamburger-line-thickness;
   border-radius: 3px;
   background: $hamburger-menu-color;
-  content: '';
+  content: "";
   transition: all $animate-speed !important;
   transform: rotate(0deg);
 }
@@ -262,7 +262,7 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
 //  c-drawer-fixed-bar - is-open
 // ---------------------------------------------------------------
 .c-drawer-fixed-bar.is-open {
-  box-shadow: 0 0 16px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
   -webkit-transition: -webkit-transform $animate-speed;
 }
 

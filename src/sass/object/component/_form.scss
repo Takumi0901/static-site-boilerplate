@@ -15,7 +15,7 @@ $form-default-border: $base-color-border;
     background: $base-color-bg;
     display: block;
     border: solid 1px $form-default-border;
-    padding: $margin-base $margin-base * 2;
+    padding: 0.5rem 1rem;
     width: 100%;
     -webkit-appearance: none;
     @include responsive-font-size(14px);
@@ -46,7 +46,7 @@ $form-default-border: $base-color-border;
 .c-form__title {
   @include responsive-font-size(14px);
 
-  margin-bottom: $margin-base;
+  margin-bottom: 0.5rem;
 }
 
 .c-form__reqiured {
@@ -55,8 +55,8 @@ $form-default-border: $base-color-border;
   @include responsive-font-size(10px);
 
   color: $base-color-bg;
-  padding: $margin-base / 2 $margin-base;
-  margin: 0 $margin-base / 2;
+  padding: 0.5rem 0.5rem;
+  margin: 0 0.5rem;
   vertical-align: 1px;
 }
 

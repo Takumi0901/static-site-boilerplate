@@ -3,19 +3,19 @@
 */
 
 .c-container {
-  margin: 0 $margin-base * 2 $margin-base * 3;
+  margin: 0 1rem 1.5rem;
 }
 
 // Modifier
 // --------------------
 .c-container--small {
-  margin: 0 $margin-base * 3 $margin-base * 3;
+  margin: 0 1.5rem 1.5rem;
 }
 
 .c-container--x-small {
-  margin: 0 $margin-base * 4 $margin-base * 3;
+  margin: 0 2rem 1.5rem;
 }
 
 .c-container--full {
-  margin: 0 0 $margin-base * 3;
+  margin: 0 0 1.5rem;
 }
