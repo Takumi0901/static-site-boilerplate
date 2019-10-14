@@ -7,14 +7,17 @@ $btn-default-ov: lighten($base-color-text, 10%);
 $btn-default-text-color: #fff;
 
 .c-btn {
-  display: inline-block;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
   border: 0;
   text-align: center;
   touch-action: manipulation;
   cursor: pointer;
-  padding: $margin-base $margin-base * 2;
+  padding: 0 2rem;
 
-  @include responsive-font-size(14px);
+  @include responsive-font-size(16px);
 
   outline: none;
   position: relative;
@@ -43,13 +46,6 @@ $btn-default-text-color: #fff;
 
 // Modifier - size
 // --------------------
-.c-btn--large {
-  @include button-size(20px, 48px);
-}
-
-.c-btn--small {
-  @include button-size(10px, 20px);
-}
 
 // Modifier - display
 // --------------------

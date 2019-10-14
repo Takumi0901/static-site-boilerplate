@@ -2,14 +2,19 @@
 //  Base-Size
 // ---------------------------------------------------------------
 $base-size: 1;
-$max-width: 1200px;
-$breakpoint: 768px;
+$max-width: 67.5rem;
+$content-width: 60rem;
+$breakpoint: 56rem;
+$breakpoint-large: 70rem;
+$breakpoint-small: 40rem;
+$breakpoint-x-large: 85rem;
+$small-content-width: 40rem;
 
 // ---------------------------------------------------------------
 //  Font
 // ---------------------------------------------------------------
-$base-font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-$font-size-base: 1.4rem;
+$base-font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
+$font-size-base: 1.6rem;
 
 // ---------------------------------------------------------------
 //  Line-hieght
@@ -20,7 +25,7 @@ $line-height-base: 1.6;
 //  Base-color
 // ---------------------------------------------------------------
 $base-color-bg: #fff;
-$base-color-text: #515151;
+$base-color-text: #333;
 $base-color-border: #bcbcbc;
 $base-color-link: #0bd;
 

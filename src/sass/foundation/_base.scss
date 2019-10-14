@@ -16,7 +16,7 @@ body {
   font-family: $base-font-family;
   line-height: $line-height-base;
 
-  @include responsive-font-size(14px);
+  @include responsive-font-size(16px);
 
   -webkit-text-size-adjust: 100%;
 }
@@ -56,6 +56,6 @@ div {
 }
 
 input[type="radio"] {
-  margin-left: $margin-base * 2;
-  margin-right: $margin-base;
+  margin-left: 2rem;
+  margin-right: 1rem;
 }
