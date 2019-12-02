@@ -5,7 +5,6 @@ var plumber = require("gulp-plumber");
 var ejs = require("gulp-ejs");
 var rename = require("gulp-rename");
 var fs = require("fs");
-var webserver = require("gulp-webserver");
 var docs = ".";
 var distDir = docs + "/dist";
 var srcDir = docs + "/src";
@@ -59,18 +58,6 @@ gulp.task("sass", done => {
     .pipe(connect.reload());
   done();
 });
-
-// gulp.task("webserver", function() {
-//   gulp.src("./dist").pipe(
-//     webserver({
-//       host: "localhost",
-//       livereload: true,
-//       port: 3000,
-//       fallback: "index.html",
-//       open: true
-//     })
-//   );
-// });
 
 gulp.task("connect", function() {
   connect.server({
