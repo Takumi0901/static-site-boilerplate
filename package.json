@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
+    "build": "gulp build",
     "images": "gulp run images"
   },
   "repository": {
@@ -31,10 +32,13 @@
     "gulp-webserver": "^0.9.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.0",
     "prettier": "^1.18.2",
     "prettier-stylelint": "^0.4.2",
     "rfs": "^8.0.3",
     "stylelint-config-standard": "^18.2.0"
+  },
+  "dependencies": {
+    "gulp-sitemap": "^7.6.0"
   }
 }

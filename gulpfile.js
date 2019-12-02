@@ -16,6 +16,7 @@ var changed = require("gulp-changed");
 var concat = require("gulp-concat");
 var prefix = require("gulp-autoprefixer");
 var connect = require("gulp-connect");
+var sitemap = require("gulp-sitemap");
 
 var exports = {
   entry: "src/",
@@ -89,7 +90,7 @@ gulp.task("images", done => {
           quality: [0.65, 0.8], // 文字列から配列型に変更
           speed: 1
         }),
-        mozjpeg({ quality: 80 })
+        mozjpeg()
       ])
     )
     .pipe(gulp.dest(distDir))
@@ -106,14 +107,31 @@ gulp.task("js", function() {
     .pipe(connect.reload());
 });
 
+gulp.task("sitemap", function() {
+  return gulp
+    .src("dist/**/*.html", {
+      read: false
+    })
+    .pipe(
+      sitemap({
+        siteUrl: "https://example.com/"
+      })
+    )
+    .pipe(gulp.dest("./dist"));
+});
+
 gulp.task("log", done => {
   console.log("DONE");
   done();
 });
 
-gulp.watch("src/js/**/**/*", gulp.series("js", "log"));
-gulp.watch("src/sass/**/**/*", gulp.series("sass", "log"));
-gulp.watch("src/ejs/**/*.ejs", gulp.series("ejs", "log"));
-gulp.watch("src/images/**/*.{png,jpg,gif,svg}", gulp.series("images", "log"));
+function watchFiles(done) {
+  gulp.watch("src/js/**/**/*", gulp.series("js", "log"));
+  gulp.watch("src/sass/**/**/*", gulp.series("sass", "log"));
+  gulp.watch("src/ejs/**/*.ejs", gulp.series("ejs", "log"));
+  gulp.watch("src/images/**/*.{png,jpg,gif,svg}", gulp.series("images", "log"));
+  done();
+}
 
-gulp.task("default", gulp.series("js", "sass", "ejs", "images", "connect"));
+gulp.task("default", gulp.series(watchFiles, "connect"));
+gulp.task("build", gulp.series("js", "sass", "ejs", "images", "sitemap"));
