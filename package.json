@@ -31,7 +31,6 @@
     "gulp-sass": "^4.0.2",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
-    "node-sass": "^4.13.0",
     "prettier": "^1.18.2",
     "prettier-stylelint": "^0.4.2",
     "rfs": "^8.0.3",
